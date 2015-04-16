@@ -1,3 +1,7 @@
+# WARNING:
+
+Feel free to use this script, but it's not very polished. I've published it for a few co-workers and myself.
+
 # Requirements:
 
 1. Requests - http://docs.python-requests.org/en/latest/
@@ -34,7 +38,7 @@ You will need to have KMLink working. Please follow just the "Installation" inst
 
 This repository contains a macro that you should be able to import into Keyboard Maestro.
 
-1. Import the macro into Keyboard Maestro
+1. Import the "start_ac_toggl_timer.kmmacros" macro file into Keyboard Maestro
 1. Update the "Execute Shell Script" to point to your copy of kmtoggl.py
 
 ## Bookmarklet
@@ -47,5 +51,7 @@ This repository contains a macro that you should be able to import into Keyboard
 
 # Usage
 
-1. Click the bookmark.
-1. Check if the timer started (either in Toggl Desktop or on the toggl website)
+1. Click the bookmark. This will pass variables to Keyboard Maestro, which will fire off the python script to create the project (if needed) and start the timer.
+1. Check if the timer started (either in Toggl Desktop or on the toggl website).
+
+If a timer is already running when you start a new one, the running timer will stop and the new one will start.
